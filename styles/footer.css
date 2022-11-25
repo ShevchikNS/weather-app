@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+.footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 30%;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+.content {
+  z-index: 10;
+  min-height: calc(100vh - 30vh);
+}
+
+body {
+  background-image: url('../public/img.jpg');
+  max-width: 100%;
+  height: auto;
+}
+.footerItems {
+  display: flex;
+  gap: 5em;
+  justify-content: center;
+
+}
+.nameItem {
+  font-size: 42px;
+}
+.characterItem {
+  font-size: 32px;
+}
