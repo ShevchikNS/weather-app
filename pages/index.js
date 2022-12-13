@@ -33,6 +33,11 @@ export default function Home({weather}) {
     return (
 
         <div>
+            <Head>
+                <title>Погода Гродно</title>
+                <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+                <meta name="keywords" content="Погода, Гродно, Погода Азот, Погода Гродно" />
+            </Head>
             <div className="content">
                 <Header/>
                 <div className="now">
