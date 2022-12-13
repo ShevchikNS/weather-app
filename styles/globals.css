@@ -27,7 +27,7 @@
 }
 
 .now-astro {
-    margin-top: 22px;
+    /*margin-top: 22px;*/
     transform: translate(-50%, 40px);
     width: 390px;
     overflow: hidden;
@@ -70,7 +70,7 @@
 }
 
 .degrees {
-    margin-top: 15vh;
+    margin-top: 12vh;
     text-align: center;
     font-size: 80px;
 }
