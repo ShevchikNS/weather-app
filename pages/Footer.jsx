@@ -1,20 +1,20 @@
 import React from 'react';
 
-const Footer = () => {
+const Footer = ({pressure, windSpeed, windDirection}) => {
     return (
         <div className="footer">
             <div className="footerItems">
                 <div className="items">
                     <div className="nameItem">Давление</div>
-                    {/*<div className="characterItem">{pressure}</div>*/}
+                    <div className="characterItem">{pressure}</div>
                 </div>
                 <div className="items">
                     <div className="nameItem">Скорость ветра</div>
-                    {/*<div className="characterItem">{windSpeed}</div>*/}
+                    <div className="characterItem">{windSpeed}</div>
                 </div>
                 <div className="items">
                     <div className="nameItem">Направление</div>
-                    {/*<div className="characterItem">{windDirection}</div>*/}
+                    <div className="characterItem">{windDirection}</div>
                 </div>
             </div>
         </div>
