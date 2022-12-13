@@ -7,9 +7,7 @@ import Head from 'next/head';
 
 export async function getServerSideProps() {
     const resDegrees = await fetch(`${process.env.PORT}/api/hello`)
-//
     const weather = await resDegrees.json()
-//     const sunriseSunset = await resSunriseSunset.json()
     return {props: {weather}}
 }
 
@@ -22,7 +20,6 @@ export const getSunTime = (weather) => {
     const dayLengh = (parsedSunset[0] - parsedSunrise[0]) + 1/60 * (parsedSunset[1] - parsedSunrise[1])
     const dayCoefficient = ((currentHours - parsedSunrise[0]) + 0.01 * (currentMinutes - parsedSunrise[1]))
     const sunTime = -40 + dayCoefficient * (80 / dayLengh)
-
     return sunTime
 }
 export default function Home({weather}) {
