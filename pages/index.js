@@ -26,7 +26,8 @@ export default function Home({weather}) {
     const Style = {
         transform: `rotate(${getSunTime(weather)}deg)`,
     }
-
+    const parsedSunrise = (weather.sunrise).split(':')[0]
+    const convertedSunrise = Number(parsedSunrise)
     return (
 
         <div>
@@ -48,7 +49,7 @@ export default function Home({weather}) {
                                     {weather.sunrise}
                                 </div>
                                 <div className="caption">
-                                    Восход
+                                    {convertedSunrise > 10 ? <p>Заход</p>: <p>Восход</p>}
                                 </div>
                             </div>
                             <div className="now-astro-sunset">
@@ -56,7 +57,7 @@ export default function Home({weather}) {
                                     {weather.sunset}
                                 </div>
                                 <div className="caption">
-                                    Заход
+                                    {convertedSunrise > 10 ? <p>Восход</p>: <p>Заход</p> }
                                 </div>
                             </div>
                         </div>
