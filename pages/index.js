@@ -11,18 +11,19 @@ export async function getServerSideProps() {
     return {props: {weather}}
 }
 
-export const getSunTime = (weather) => {
-    const date = new Date()
-    const currentHours = date.getHours()
-    const currentMinutes = date.getMinutes()
-    const parsedSunrise = (weather.sunrise).split(':')
-    const parsedSunset = (weather.sunset).split(':')
-    const dayLengh = (parsedSunset[0] - parsedSunrise[0]) + 1/60 * (parsedSunset[1] - parsedSunrise[1])
-    const dayCoefficient = ((currentHours - parsedSunrise[0]) + 0.01 * (currentMinutes - parsedSunrise[1]))
-    const sunTime = -40 + dayCoefficient * (80 / dayLengh)
-    return sunTime
-}
+
 export default function Home({weather}) {
+     const getSunTime = (weather) => {
+        const date = new Date()
+        const currentHours = date.getHours()
+        const currentMinutes = date.getMinutes()
+        const parsedSunrise = (weather.sunrise).split(':')
+        const parsedSunset = (weather.sunset).split(':')
+        const dayLengh = (parsedSunset[0] - parsedSunrise[0]) + 1/60 * (parsedSunset[1] - parsedSunrise[1])
+        const dayCoefficient = ((currentHours - parsedSunrise[0]) + 0.01 * (currentMinutes - parsedSunrise[1]))
+        const sunTime = -40 + dayCoefficient * (80 / dayLengh)
+        return sunTime
+    }
     const Style = {
         transform: `rotate(${getSunTime(weather)}deg)`,
     }
