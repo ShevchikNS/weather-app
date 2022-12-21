@@ -64,8 +64,8 @@ export default function Home({weather}) {
                     </div>
                 </div>
                 <div className="mainData">
-                    <h1 className="degrees"> {weather.degrees}°C</h1>
-                    <h1 className="weatherNow"> {weather.weatherNow}</h1>
+                    <div className="degrees"> {weather.degrees}°C</div>
+                    <div className="weatherNow"> {weather.weatherNow}</div>
                 </div>
             </div>
             <Footer
