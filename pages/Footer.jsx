@@ -5,12 +5,12 @@ const Footer = ({pressure, windSpeed}) => {
         <div className="footer">
             <div className="footerItems">
                 <div className="items">
-                    <div className="nameItem">????????</div>
-                    <div className="characterItem">{pressure} ??. ??. ??.</div>
+                    <div className="nameItem">Давление</div>
+                    <div className="characterItem">{pressure} мм. рт. ст.</div>
                 </div>
                 <div className="items">
-                    <div className="nameItem">???????? ?????</div>
-                    <div className="characterItem">{windSpeed} ?/?</div>
+                    <div className="nameItem">Скорость ветра</div>
+                    <div className="characterItem">{windSpeed} м/с</div>
                 </div>
                 {/*<div className="items">*/}
                 {/*    <div className="nameItem">???????????</div>*/}
