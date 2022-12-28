@@ -39,10 +39,10 @@ export default async function handler(req, res) {
     const degrees = (values[0].split(':')[1].split(' ')[0]).slice(2)
     const pressure = (values[0].split('\n')[3]).trim().split(' ')[0]
     const windSpeed = values[0].split('\n')[6].split(' ')[0]
+
     // const sunrise = values2[0]
     // const sunset = values2[1]
     // const weatherNow = values2[2]
-    // const windDirection = values2[3]
 
     res.status(200).json({
         degrees: degrees,

@@ -3,13 +3,13 @@ import Header from './Header'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Head from 'next/head';
+import Footer from './Footer'
 
 export async function getServerSideProps() {
     const resDegrees = await fetch(`${process.env.PORT}/api/hello`)
     const weather = await resDegrees.json()
     return {props: {weather}}
 }
-
 
 export default function Home({weather}) {
 
@@ -51,6 +51,11 @@ export default function Home({weather}) {
                     <div className="degrees"> {weather.degrees}°C</div>
                 </div>
             </div>
+            <Footer
+                pressure={weather.pressure}
+                windSpeed={weather.windSpeed}
+                // windDirection={weather.windDirection}
+            />
         </div>
     )
 }
