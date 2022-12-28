@@ -5,7 +5,7 @@ import styles from '../styles/Home.module.css'
 import Head from 'next/head';
 
 export async function getServerSideProps() {
-    const resDegrees = await fetch(`http://localhost:3000/api/hello`)
+    const resDegrees = await fetch(`${process.env.PORT}/api/hello`)
     const weather = await resDegrees.json()
     return {props: {weather}}
 }
