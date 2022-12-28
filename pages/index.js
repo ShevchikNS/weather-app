@@ -11,23 +11,23 @@ export async function getServerSideProps() {
     return {props: {weather}}
 }
 
-export const getSunTime = (weather) => {
-    const date = new Date()
-    const currentHours = date.getHours()
-    const currentMinutes = date.getMinutes()
-    const parsedSunrise = (weather.sunrise).split(':')
-    const parsedSunset = (weather.sunset).split(':')
-    const dayLengh = (parsedSunset[0] - parsedSunrise[0]) + 1/60 * (parsedSunset[1] - parsedSunrise[1])
-    const dayCoefficient = ((currentHours - parsedSunrise[0]) + 0.01 * (currentMinutes - parsedSunrise[1]))
-    const sunTime = -40 + dayCoefficient * (80 / dayLengh)
-    return sunTime
-}
+// export const getSunTime = (weather) => {
+//     const date = new Date()
+//     const currentHours = date.getHours()
+//     const currentMinutes = date.getMinutes()
+//     const parsedSunrise = (weather.sunrise).split(':')
+//     const parsedSunset = (weather.sunset).split(':')
+//     const dayLengh = (parsedSunset[0] - parsedSunrise[0]) + 1/60 * (parsedSunset[1] - parsedSunrise[1])
+//     const dayCoefficient = ((currentHours - parsedSunrise[0]) + 0.01 * (currentMinutes - parsedSunrise[1]))
+//     const sunTime = -40 + dayCoefficient * (80 / dayLengh)
+//     return sunTime
+// }
 export default function Home({weather}) {
-    const Style = {
-        transform: `rotate(${getSunTime(weather)}deg)`,
-    }
-    const parsedSunrise = (weather.sunrise).split(':')[0]
-    const convertedSunrise = Number(parsedSunrise)
+    // const Style = {
+    //     transform: `rotate(${getSunTime(weather)}deg)`,
+    // }
+    // const parsedSunrise = (weather.sunrise).split(':')[0]
+    // const convertedSunrise = Number(parsedSunrise)
     return (
 
         <div>
@@ -41,7 +41,7 @@ export default function Home({weather}) {
                 <div className="now">
                     <div className="now-astro">
                         <div className="now-astro-sun">
-                            <div className="now-astro-line now-astro-line-day" style={Style}></div>
+                            <div className="now-astro-line now-astro-line-day" ></div>
                         </div>
                         <div className="sunriseSunset">
                             <div className="now-astro-sunrise">
@@ -65,14 +65,14 @@ export default function Home({weather}) {
                 </div>
                 <div className="mainData">
                     <div className="degrees"> {weather.degrees}°C</div>
-                    <div className="weatherNow"> {weather.weatherNow}</div>
+                    {/*<div className="weatherNow"> {weather.weatherNow}</div>*/}
                 </div>
             </div>
-            <Footer
-                pressure={weather.pressure}
-                windSpeed={weather.windSpeed}
-                windDirection={weather.windDirection}
-            />
+            {/*<Footer*/}
+            {/*    pressure={weather.pressure}*/}
+            {/*    windSpeed={weather.windSpeed}*/}
+            {/*    windDirection={weather.windDirection}*/}
+            {/*/>*/}
         </div>
     )
 }
