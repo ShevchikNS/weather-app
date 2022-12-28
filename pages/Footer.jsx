@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Footer = ({pressure, windSpeed}) => {
+const Footer = ({pressure, windSpeed, windDirection}) => {
     return (
         <div className="footer">
             <div className="footerItems">
@@ -12,10 +12,10 @@ const Footer = ({pressure, windSpeed}) => {
                     <div className="nameItem">Скорость ветра</div>
                     <div className="characterItem">{windSpeed} м/с</div>
                 </div>
-                {/*<div className="items">*/}
-                {/*    <div className="nameItem">???????????</div>*/}
-                {/*    <div className="characterItem">{windDirection}</div>*/}
-                {/*</div>*/}
+                <div className="items">
+                    <div className="nameItem">Направление ветра</div>
+                    <div className="characterItem">{windDirection}</div>
+                </div>
             </div>
         </div>
     );
