@@ -12,7 +12,7 @@ export default async function handler(req, res) {
     // const $2 = cheerio.load(html2)
 
     const values = []
-    const values2 = []
+    // const values2 = []
     $('tbody').each((index, el) => {
         const page = $(el)
         const title = page.find('td').text()
