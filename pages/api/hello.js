@@ -6,7 +6,7 @@ export default async function handler(req, res) {
     // const response2 = await axios.get('https://www.gismeteo.by/weather-grodno-4243/now/')
 
     const html = response.data
-    const html2 = response2.data
+    // const html2 = response2.data
 
     const $ = cheerio.load(html)
     // const $2 = cheerio.load(html2)

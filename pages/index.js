@@ -1,33 +1,18 @@
 import React, {useState} from 'react';
 import Header from './Header'
-// import Footer from './Footer'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Head from 'next/head';
 
 export async function getServerSideProps() {
-    const resDegrees = await fetch(`${process.env.PORT}/api/hello`)
+    const resDegrees = await fetch(`http://localhost:3000/api/hello`)
     const weather = await resDegrees.json()
     return {props: {weather}}
 }
 
-// export const getSunTime = (weather) => {
-//     const date = new Date()
-//     const currentHours = date.getHours()
-//     const currentMinutes = date.getMinutes()
-//     const parsedSunrise = (weather.sunrise).split(':')
-//     const parsedSunset = (weather.sunset).split(':')
-//     const dayLengh = (parsedSunset[0] - parsedSunrise[0]) + 1/60 * (parsedSunset[1] - parsedSunrise[1])
-//     const dayCoefficient = ((currentHours - parsedSunrise[0]) + 0.01 * (currentMinutes - parsedSunrise[1]))
-//     const sunTime = -40 + dayCoefficient * (80 / dayLengh)
-//     return sunTime
-// }
+
 export default function Home({weather}) {
-    // const Style = {
-    //     transform: `rotate(${getSunTime(weather)}deg)`,
-    // }
-    // const parsedSunrise = (weather.sunrise).split(':')[0]
-    // const convertedSunrise = Number(parsedSunrise)
+
     return (
 
         <div>
@@ -46,18 +31,17 @@ export default function Home({weather}) {
                         <div className="sunriseSunset">
                             <div className="now-astro-sunrise">
                                 <div className="time">
-                                    {weather.sunrise}
+                                    Пока ничего
                                 </div>
                                 <div className="caption">
-                                    {convertedSunrise > 10 ? <p>Заход</p>: <p>Восход</p>}
+
                                 </div>
                             </div>
                             <div className="now-astro-sunset">
                                 <div className="time">
-                                    {weather.sunset}
+                                    Пока ничего
                                 </div>
                                 <div className="caption">
-                                    {convertedSunrise > 10 ? <p>Восход</p>: <p>Заход</p> }
                                 </div>
                             </div>
                         </div>
@@ -65,14 +49,8 @@ export default function Home({weather}) {
                 </div>
                 <div className="mainData">
                     <div className="degrees"> {weather.degrees}°C</div>
-                    {/*<div className="weatherNow"> {weather.weatherNow}</div>*/}
                 </div>
             </div>
-            {/*<Footer*/}
-            {/*    pressure={weather.pressure}*/}
-            {/*    windSpeed={weather.windSpeed}*/}
-            {/*    windDirection={weather.windDirection}*/}
-            {/*/>*/}
         </div>
     )
 }
