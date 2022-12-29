@@ -46,7 +46,7 @@
 }
 
 .now-astro-line-day {
-    background-image: url(https://static.gismeteo.st/assets/icons/day_path.svg);
+    background-image: url(day_path.svg);
     transform: rotate(0deg);
 }
 
