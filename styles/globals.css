@@ -46,7 +46,7 @@
 }
 
 .now-astro-line-day {
-    background-image: url('../public/day_path.svg');
+    background-image: url(../public/day_path.svg);
     transform: rotate(0deg);
 }
 
