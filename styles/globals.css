@@ -4,10 +4,10 @@
     color: white;
 }
 .MainTitle {
-    padding-top: 3vh;
+    padding-top: 2vh;
 }
 .SubTitle {
-    padding-top: 5vh;
+    padding-top: 2vh;
 }
 .header {
     height: 10%;
@@ -46,7 +46,7 @@
 }
 
 .now-astro-line-day {
-    background-image: url(https://static.gismeteo.st/assets/icons/day_path.svg);
+    background-image: url('../public/day_path.svg');
     transform: rotate(0deg);
 }
 
