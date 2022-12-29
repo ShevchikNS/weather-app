@@ -72,8 +72,9 @@
 .degrees {
     margin-top: 7vh;
     text-align: center;
-    font-size: 84px;
+    font-size: 70px;
 }
 .weatherNow {
     text-align: center;
+    font-size: 30px;
 }
