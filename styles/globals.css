@@ -46,7 +46,7 @@
 }
 
 .now-astro-line-day {
-    background: url(day_path.svg);
+    background: url(../public/day_path.png);
     transform: rotate(0deg);
 }
 
@@ -70,9 +70,9 @@
 }
 
 .degrees {
-    margin-top: 12vh;
+    margin-top: 7vh;
     text-align: center;
-    font-size: 80px;
+    font-size: 84px;
 }
 .weatherNow {
     text-align: center;
