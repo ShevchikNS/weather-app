@@ -6,7 +6,7 @@ import Head from 'next/head';
 import Footer from './Footer'
 
 export async function getServerSideProps() {
-    const resDegrees = await fetch(`${process.env.PORT}/api/hello`)
+    const resDegrees = await fetch(`${process.env.PORT}/api/weatherApi`)
     const weatherFromApi = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=53.63&longitude=23.89&daily=sunrise,sunset&current_weather=true&windspeed_unit=ms&timezone=Europe%2FMoscow`)
 
     const weather = await resDegrees.json()
