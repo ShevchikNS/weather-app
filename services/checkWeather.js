@@ -1,7 +1,7 @@
 const checkWeatherWithCode = (weatherCode) => {
     const weatherValues = {
         weatherCode_0: 'Ясно',
-        weatherCode_1: 'В основном ясно',
+        weatherCode_1: 'Преимещуственно ясно',
         weatherCode_2: 'Переменная облачность',
         weatherCode_3: 'Пасмурно',
         weatherCode_45: 'Туман',
