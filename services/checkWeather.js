@@ -33,7 +33,7 @@ const checkWeatherWithCode = (weatherCode) => {
         case 1:
             return weatherValues.weatherCode_1
         case 2:
-            return weatherValues.weatherCode_3
+            return weatherValues.weatherCode_2
         case 3:
             return weatherValues.weatherCode_3
         case 45:
