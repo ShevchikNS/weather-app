@@ -4,6 +4,7 @@ import Footer from './Footer'
 import Image from 'next/image'
 import Head from 'next/head';
 import {checkWeatherWithCode, getWindSpeed, getSunTime} from '../services/checkWeather.js'
+import logo from '../public/img.jpg'
 
 export async function getServerSideProps() {
     const resDegrees = await fetch(`${process.env.PORT}/api/weatherApi`)
@@ -35,6 +36,13 @@ export default function Home({weatherFromScraper, weatherFromApi}) {
     return (
 
         <div>
+            <Image
+                src = {logo}
+                alt = "background"
+                layout = "fill"
+                objectFit = "cover"
+                className = "backgroundImg"
+            />
             <Head>
                 <title>Погода Гродно</title>
                 <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
@@ -42,6 +50,7 @@ export default function Home({weatherFromScraper, weatherFromApi}) {
             </Head>
             <div className="content">
                 <Header/>
+
                 <div className="now">
                     <div className="now-astro">
                         <div className="now-astro-sun">
@@ -77,6 +86,7 @@ export default function Home({weatherFromScraper, weatherFromApi}) {
                 windSpeed={weatherFromScraper.windSpeed}
                 windDirection={getWindSpeed(weatherFromScraper.windDirection)}
             />
+
         </div>
     )
 }

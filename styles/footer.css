@@ -11,20 +11,22 @@
     width: 100%;
     height: 50%;
 }
+@media screen and (min-width: 821px) {
 
-.footerItems {
-    display: flex;
-    gap: 3em;
-    justify-content: center;
-    text-align: center;
-}
+    .footerItems {
+        display: flex;
+        gap: 3em;
+        justify-content: center;
+        text-align: center;
+    }
 
-.nameItem {
-    font-size: 42px;
-}
+    .nameItem {
+        font-size: 42px;
+    }
 
-.characterItem {
-    font-size: 32px;
+    .characterItem {
+        font-size: 32px;
+    }
 }
 .items {
     padding: 15px 20px;
