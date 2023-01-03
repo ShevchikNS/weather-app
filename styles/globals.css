@@ -10,11 +10,13 @@
 }
 
 body {
-    background: url('../public/img.jpg') no-repeat;
-
+    background-image: url('../public/img.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     background-size: cover;
-    max-width: 100%;
-    height: auto;
+    /*max-width: 100%;*/
+    /*height: auto;*/
 }
 
 .MainTitle {
