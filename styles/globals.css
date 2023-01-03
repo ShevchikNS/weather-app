@@ -4,6 +4,20 @@
     font-family: 'Roboto', sans-serif;
     color: white;
 }
+.content {
+    z-index: 10;
+    min-height: calc(100vh - 50vh);
+}
+
+body {
+    background: url('../public/img.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    max-width: 100%;
+    height: auto;
+}
 
 .MainTitle {
     padding-top: 2vh;
