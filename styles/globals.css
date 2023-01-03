@@ -11,10 +11,9 @@
 
 body {
     background-image: url('../public/img.jpg');
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
     background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
     /*max-width: 100%;*/
     /*height: auto;*/
 }
